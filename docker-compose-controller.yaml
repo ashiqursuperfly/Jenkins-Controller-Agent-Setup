@@ -5,6 +5,7 @@ services:
     image: jenkins/jenkins:lts-jdk11
     privileged: true
     user: root
+    container_name: $CONTAINER_NAME
     ports:
       - 50001:8080
       - 50002:50000

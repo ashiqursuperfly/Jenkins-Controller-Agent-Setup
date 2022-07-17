@@ -34,6 +34,8 @@ NumberOfExecutors: 1-2
 
 RemoteRootDirectory: /home/jenkins/agent
 
+Labels: Space separated values, Can be useful to restrict jobs to run on a particular agent
+
 Usage: Use this node as much as possible
 
 Launch Method: Launch agents via SSH
@@ -49,3 +51,11 @@ Launch Method > Advanced
 ConnectionTimeoutInSeconds: 60
 MaximumNumberOfRetries: 10
 SecondsToWaitBetweenRetries: 15
+
+#### Step 5: Configure the Agent
+
+We can install required tools like git, python3, python3-venv in the agent by doing a docker exec -it.
+
+#### Step 6: Create jobs and run
+
+- We can restrict a job to run on a particular agent by using the labels we assigned when creating an agent.
