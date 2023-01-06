@@ -54,7 +54,7 @@ ssh-keygen -t rsa -f jenkins_agent_1
 
 *ID*: An Unique ID for the credential that can be used to refer to the credential
 
-*Private Key*: SSH Private Key file contents (e.g: jenkins_agent_1.pub)
+*Private Key*: SSH Private Key file contents (e.g: jenkins_agent_1)
 
 #### Step 3: Spin up a Jenkins Agent(slave) Container
 We can use the official jenkins-ssh-agent docker container. Here's an example docker-compose file that you can use.
@@ -98,7 +98,7 @@ Goto *Jenkins Dashboard* > *Manage Jenkins* > *Manage Nodes and Clouds* > *New N
 
 *RemoteRootDirectory*: /home/jenkins/agent
 
-*Labels*: linux, python # Space separated values, Can be useful to restrict jobs to run on a particular agent
+*Labels*: linux python # Space separated values, Can be useful to restrict jobs to run on a particular agent
 
 *Usage*: Use this node as much as possible
 
